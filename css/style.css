@@ -1,0 +1,432 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+/* ----- Génerale------ */
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+    --bleu: #0065FC;
+    --bleu-light: #DEEBFF;
+    --gray-light: #F2F2F2;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+}
+#container {
+    background-color: white;
+    width: 98%;
+    height: auto;
+    max-width: 1440px;
+    margin: 0px auto;
+}
+a{
+    text-decoration: none;
+    color: black;   
+}
+p {
+    color: black;
+}
+
+/*  ------ Partie Menu -------- */
+
+.menu{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu img{
+    width: 80px;
+    height: 40px;
+    object-fit: cover;
+    margin-left: 20px;
+}
+.liens a{
+    padding: 40px 30px;
+    font-size: 18px;
+}
+.liens a:hover{
+    transition: 0.3s all;
+    border-top: 3px solid var(--bleu);
+    color: var(--bleu);
+}
+
+/* ------ Partie Recherche ------ */
+
+#recherche{
+    margin: 10px 0px ;
+}
+h1{
+    color: black;
+    padding: 10px 0px;
+    font-size: 24px;
+}
+.paragraphTitre{
+    font-size: 18px;
+    padding: 10px 0px;
+}
+form{
+    display: flex;
+    margin: 15px 0px;
+}
+.blocRecherche{
+    padding: 15px;
+    font-size: 18px;  
+}
+.btn1{
+    display: none;
+}
+#form span{
+    border: 3px solid var(--gray-light);
+    border-radius: 15px 0px 0px 15px;
+    background-color: var(--gray-light);
+}
+form .text{
+    max-width: 70%;
+    font-weight: bold;
+    width: auto;
+    border-style: none;
+    border-bottom: 3px solid var(--gray-light);
+    border-top: 3px solid var(--gray-light);
+}
+.text:focus{
+    outline: none;
+}
+#form .btn{
+    border-style: none;
+    border-radius: 0px 15px 15px 0px;
+    background-color: var(--bleu);
+    color: white;
+}
+#form .btn:hover{
+    cursor: pointer;
+    transition: 0.3s all;
+    background-color: var(--bleu-light);
+    border: 3px solid var(--bleu);
+    color: var(--bleu);
+}
+
+/* ------ Partie Filtres -------- */
+
+#filtres{
+    display: flex;
+    align-items: center;
+    margin: 20px 0px;
+}
+#filtres h2{
+    font-size: 21px;
+    padding: 10px 0px;
+    margin-right: 24px;
+}
+.filtres{
+    display: flex;   
+}
+.filtres button{
+    padding: 15px 24px 15px 66px;
+    margin-right: 26px;
+    position: relative;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: white;
+    border: 3px solid var(--gray-light);
+    border-radius: 50px;
+}
+.filtres button:hover{
+    cursor: pointer;
+    transition: 0.3s all;
+    background-color: var(--bleu-light);
+    color: var(--bleu);
+    border: 3px solid var(--bleu);
+}
+.filtres span{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 24px;
+    padding: 10px;
+    color: var(--bleu);
+    background-color: var(--bleu-light);
+}
+.filtres span:hover{
+    transition: 0.3s all;
+    background-color: var(--bleu);
+    color: white;
+}
+.message{
+    display: flex;
+   align-items: center;
+    margin: 15px 0px
+}
+.message p{
+    font-size: 16px;
+}
+.message .fa-info{
+    font-size: 12px;
+    padding: 4px 8px;
+    color: var(--bleu);
+    border: 3px solid var(--gray-light);
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+/* ----- Partie Hébergements ----- */
+
+#hebergements{
+    display: flex;
+    justify-content: space-between;
+    height: 640px;
+}
+#hebergements h2 {
+    font-size: 23px;
+    margin: 20px 0px;
+}
+.bloc-gauche{ 
+    width: 68%;
+    height: 100%;
+    background-color: var(--gray-light);
+    padding: 40px;
+    margin-right: 15px;
+    border-radius: 20px;
+}
+.items-bloc-gauche{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;  
+}
+.cartes-gauche {
+    position: relative;
+    width: 31%;
+    height: 200px;
+    background-color: white;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 6px rgba(0,0,0, 0.3);
+}
+.cartes-gauche:hover{
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.6);
+   transition: 0.3s all;
+}
+.cartes-gauche img {
+    object-fit: cover;
+    width: 100%;
+    padding: 6px;
+    height: 130px;
+    border-radius: 20px 20px 0px 0px;
+}
+.info_1{
+    padding: 0px 14px;
+}
+.info_1 .titreCarte{
+    font-size: 16px;
+    font-weight: bold;
+}
+.info_1 .info_prix{
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 6px;
+}
+.info_1 .note{
+    position: absolute;
+    bottom: 7px;
+    font-size: 13px;
+    color: var(--bleu);
+}
+.carte1 .st5, .carte3 .st5, 
+.carte4 .st5, .carte5 .st5{
+    color: var(--bleu-light);
+}
+.carte4 .st4{
+    color: var(--bleu-light); 
+}
+.info_2{
+    font-size: 18px;
+    font-weight: bold;
+}
+.info_2:hover{
+    transition: 0.3s all;
+    color: var(--bleu);
+    font-size: 19px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--bleu);
+}
+.bloc-droit{
+    width: 32%;
+    height: 100%;
+    margin-left: 15px;
+    background-color: var(--gray-light);
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;    
+}
+.titre_droit{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fa-chart-line{
+    font-size: 22px;
+}
+#populaire {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.carte-droite {
+    position: relative;
+    width: 100%;
+    height: 152px;
+    border-radius: 20px;
+    background-color: white;
+    margin-bottom: 20px;
+    display: flex;
+    box-shadow: 1px 1px 6px rgba(0,0,0, 0.3);
+}
+.carte-droite:hover{
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.6);
+   transition: 0.3s all;
+}
+.carte-droite img {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    padding: 6px;
+    border-radius: 20px 0px 0px 20px;
+}
+.info_3 {
+    padding: 14px;
+}
+.info_3 .titreCarte{
+    font-size: 16px;
+    font-weight: bold;
+    
+}
+.info_3 .info_prix{
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 10px;
+}
+.carte8 .st5, .carte9 .st5{
+    color: var(--bleu-light);
+}
+.info_3 .note{
+    position: absolute;
+    bottom: 18px;
+    font-size: 13px;
+    color: var(--bleu);
+}
+
+/* ----- Partie Activités ------ */
+
+#activites{
+    margin: 50px 0px;
+    width: 100%;
+    height: auto;
+}
+#activites h2{
+    font-size: 23px;
+    margin-bottom: 30px;
+}
+.cartes-activites{
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.carte{
+    border-radius: 20px;
+    box-shadow: 1px 1px 6px rgba(0,0,0, 0.4);
+}
+.carte img{
+    border-radius: 20px 20px 0px 0px;
+}
+.carte:hover{
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.6);
+   transition: 0.3s all;
+}
+.grande{
+    width: 23%;
+    height: 460px;
+}
+.grande img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.petites{
+    width: 23%;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.small-1, .small-4 {
+    height: 240px;
+    width: 100%;
+}
+.small-2, .small-3 {
+    height: 180px;
+    width: 100%;
+}
+.small-1 img, .small-4 img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.small-2 img, .small-3 img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+.titreActivite{
+    font-size: 20px;
+    font-weight: 700;
+    padding: 15px 0px 15px 15px;
+}
+
+/* ----- Partie Footer ------- */
+
+footer{
+    display: flex;
+    background-color: var(--gray-light);
+    padding: 40px;
+}
+.piedPage{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    height: auto;
+    width: 33.3%;
+}
+h3{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.piedPage a{
+    padding-top: 10px;
+    font-size: 16px;
+}
+.piedPage a:hover{
+    color: var(--bleu);
+    font-size: 17px;
+    transition: 0.3s all;
+}
+
